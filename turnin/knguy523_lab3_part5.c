@@ -26,13 +26,13 @@ int main(void) {
 	unsigned short weight = 0x0000;
 
     while (1) {
-	tempB = PINB & 0x01;
+	tempB = 0x00;
 	weight = 0x0000;
 	weight = (PIND << 1) | (PINB & 0x01);
 	if(weight >=  0x0046)	// 70
-		tempB |= 0x02;
+		tempB = 0x02;
 	else if(weight > 0x0005)
-		tempB |= 0x04;
+		tempB = 0x04;
 	
 	PORTB = tempB;  
 	}
