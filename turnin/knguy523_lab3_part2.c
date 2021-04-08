@@ -26,7 +26,7 @@ int main(void) {
 	unsigned char tempA, tempC = 0x00;
 
     while (1) {
-	tempA = PINA;
+	tempA = PINA & 0x0F;
 	tempC = 0x00;
 	if(tempA > 0)
 		tempC |= 0x20;
